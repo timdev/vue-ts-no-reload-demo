@@ -24,5 +24,7 @@ Dev server doesn't reload.  It appears to only concern itself with .vue files.
 
 Manually bouncing the dev server will do it, but who has time for that?
 
+### SOLVED
 
-
+I didn't see the obvious: SecretMessage.ts only contains an interface, which doesn't generate any js, so webpack sees
+no change.  Thanks to @championswimmer, who was kind enough to point this out. 
